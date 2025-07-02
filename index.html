@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Time Difference</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="time-diff">
+        Time Difference
+      </button>
+      <button class="tab-btn" data-tab="tab2">Time Converter</button>
+    </div>
+
+    <div class="tab-content active" id="time-diff">
+      <h2>Time Difference</h2>
+      <div class="time-box">
+        <h3>Time 1</h3>
+        <input type="date" id="date1" />
+        <div class="time-inputs">
+          <input type="number" id="hour1" min="0" placeholder="Hour" />
+          <input type="number" id="minute1" min="0" placeholder="Minute" />
+          <input type="number" id="second1" min="0" placeholder="Second" />
+        </div>
+        <button id="setCurrent1">Set to Current Time</button>
+      </div>
+
+      <div class="time-box">
+        <h3>Time 2</h3>
+        <input type="date" id="date2" />
+        <div class="time-inputs">
+          <input type="number" id="hour2" min="0" placeholder="Hour" />
+          <input type="number" id="minute2" min="0" placeholder="Minute" />
+          <input type="number" id="second2" min="0" placeholder="Second" />
+        </div>
+        <button id="setCurrent2">Set to Current Time</button>
+      </div>
+
+      <button id="submitBtn">Calculate Difference</button>
+      <div id="result"></div>
+    </div>
+
+    <div id="tab2" class="tab-content">
+      <h2>Time Converter</h2>
+
+      <div class="converter-box">
+        <label for="inputUnit">Convert FROM:</label>
+        <select id="inputUnit">
+          <option value="seconds">Seconds</option>
+          <option value="minutes">Minutes</option>
+          <option value="hours">Hours</option>
+          <option value="days">Days</option>
+          <option value="weeks">Weeks</option>
+          <option value="years">Years</option>
+        </select>
+
+        <input type="number" id="inputValue" placeholder="Enter value" min="0">
+
+        <label><input type="checkbox" id="includeWeeks" checked> Include Weeks in Normal Format</label>
+
+        <button id="toNormalBtn">Convert to Normal</button>
+
+        <div id="normalResult" style="margin-top:10px; font-weight: bold; color: #90ee90;"></div>
+      </div>
+
+      <hr style="margin: 20px 0; border-color: #555;">
+
+      <div class="converter-box">
+        <label>Convert TO <span id="toUnitName">Seconds</span> FROM Normal Format:</label>
+
+        <div class="normal-inputs" style="display:flex; gap:8px; flex-wrap:wrap; max-width: 450px; margin-top: 8px;">
+          <label>Years <input type="number" id="normalYears" min="0" value="0" style="width: 60px;"></label>
+          <label>Weeks <input type="number" id="normalWeeks" min="0" value="0" style="width: 60px;"></label>
+          <label>Days <input type="number" id="normalDays" min="0" value="0" style="width: 60px;"></label>
+          <label>Hours <input type="number" id="normalHours" min="0" value="0" style="width: 60px;"></label>
+          <label>Minutes <input type="number" id="normalMinutes" min="0" value="0" style="width: 60px;"></label>
+          <label>Seconds <input type="number" id="normalSeconds" min="0" value="0" style="width: 60px;"></label>
+        </div>
+
+        <button id="fromNormalBtn" style="margin-top: 12px;">Convert to Unit</button>
+
+        <div id="convertedResult" style="margin-top:10px; font-weight: bold; color: #90ee90;"></div>
+      </div>
+    </div>
+
+
+    <div class="tab-content" id="tab3">
+      <h2>Placeholder for Tab 3</h2>
+    </div>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
